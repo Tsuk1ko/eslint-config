@@ -43,7 +43,7 @@ const overrideRules: Rules = {
   'antfu/curly': 'off',
   'antfu/if-newline': 'off',
   'antfu/top-level-function': 'off',
-  'array-callback-return': ['error', { allowImplicit: true, checkForEach: true, allowVoid: true }],
+  'array-callback-return': ['error', { allowImplicit: true }],
   'no-cond-assign': 'off',
   'no-console': 'off',
   'no-useless-return': 'warn',
