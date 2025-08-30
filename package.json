@@ -1,0 +1,43 @@
+{
+  "name": "@tsuk1ko/eslint-config",
+  "type": "module",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "author": "神代綺凛 <i@loli.best>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "postversion": "tpv"
+  },
+  "bin": {
+    "tec-init": "./dist/cli.js"
+  },
+  "files": [
+    "./dist/*"
+  ],
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsuk1ko/eslint-config.git"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^5.2.1",
+    "@tsuk1ko/postversion": "^1.0.2",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
+  },
+  "peerDependencies": {
+    "@antfu/eslint-config": ">=4",
+    "eslint": "^9",
+    "eslint-config-prettier": "^10"
+  }
+}
