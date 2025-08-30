@@ -2,8 +2,6 @@
 
 Kirin's ESLint config preset, based on [antfu/eslint-config](https://github.com/antfu/eslint-config).
 
-I prefer using prettier over eslint for formatting, so this configuration includes `eslint-config-prettier`.
-
 ## Usage
 
 ### Install
@@ -11,6 +9,8 @@ I prefer using prettier over eslint for formatting, so this configuration includ
 ```bash
 npm i -D @tsuk1ko/eslint-config @antfu/eslint-config eslint eslint-config-prettier
 ```
+
+`eslint-config-prettier` is optional. If you need it and have installed it, it will be automatically included in the ESLint rules.
 
 ### Auto-generate configuration
 
