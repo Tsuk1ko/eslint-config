@@ -56,6 +56,7 @@ const overrideRules: Rules = {
   'no-console': 'off',
   'no-useless-return': 'warn',
   'node/prefer-global/buffer': 'off',
+  'node/prefer-global/process':'off',
   'style/arrow-parens': ['warn', 'as-needed'],
   'style/brace-style': ['warn', '1tbs'],
   'style/indent': 'off',
