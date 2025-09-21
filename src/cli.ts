@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 import { writeFileSync } from 'node:fs';
+import { updatePackageSync } from 'write-package';
 
 writeFileSync(
   '.prettierrc.json',
-  JSON.stringify(
+  `${JSON.stringify(
     {
       printWidth: 100,
       singleQuote: true,
@@ -15,12 +16,22 @@ writeFileSync(
     },
     null,
     2,
-  ),
+  )}
+`,
 );
 
 writeFileSync(
   'eslint.config.mjs',
   `import config from '@tsuk1ko/eslint-config';
 
-export default config();`,
+export default config();
+`,
 );
+
+updatePackageSync(process.cwd(), {
+  scripts: {
+    lint: 'eslint',
+    'lint:fix': 'eslint --fix',
+    format: 'prettier --write src/',
+  },
+});

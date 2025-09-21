@@ -44,6 +44,18 @@ Create `.prettierrc.json`:
 }
 ```
 
+Add npm scripts:
+
+```json
+{
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write src/"
+  }
+}
+```
+
 ### Custom
 
 This package provides the same parameters as antfu/eslint-config for customization. Please refer to the antfu/eslint-config documentation for details.
