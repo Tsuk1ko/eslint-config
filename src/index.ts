@@ -56,7 +56,7 @@ const overrideRules: Rules = {
   'no-console': 'off',
   'no-useless-return': 'warn',
   'node/prefer-global/buffer': 'off',
-  'node/prefer-global/process':'off',
+  'node/prefer-global/process': 'off',
   'style/arrow-parens': ['warn', 'as-needed'],
   'style/brace-style': ['warn', '1tbs'],
   'style/indent': 'off',
@@ -66,6 +66,7 @@ const overrideRules: Rules = {
   'style/semi': 'off',
   'symbol-description': 'off',
   'unicorn/new-for-builtins': 'warn',
+  'unicorn/prefer-number-properties': 'off',
   'unused-imports/no-unused-vars': 'warn',
   'perfectionist/sort-imports': [
     'warn',
