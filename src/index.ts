@@ -86,6 +86,13 @@ const overrideRules: Rules = {
       ],
     },
   ],
+  'perfectionist/sort-named-imports': [
+    'warn',
+    {
+      type: 'natural',
+      ignoreCase: false,
+    },
+  ],
   'perfectionist/sort-exports': [
     'warn',
     {
