@@ -37,6 +37,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^6.0.0",
     "@tsuk1ko/postversion": "^1.0.2",
+    "@types/node": "^25.0.0",
     "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
     "jiti": "^2.6.1",
