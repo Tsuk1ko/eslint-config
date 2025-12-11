@@ -42,7 +42,9 @@ const defaultOptions = {
     : undefined,
   jsonc: false,
   yaml: false,
+  toml: false,
   markdown: false,
+  pnpm: false,
   ignores: ['**/*.js'],
 } satisfies AntfuOptions;
 
