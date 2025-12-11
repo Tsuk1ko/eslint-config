@@ -30,4 +30,7 @@ jobs:
       - name: Publish
         run: npm publish
       - name: Release
-        uses: softprops/action-gh-release@v2
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ github.token }}
+          prerelease: false
