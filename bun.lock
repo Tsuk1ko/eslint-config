@@ -1,20 +1,21 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "eslint-config",
       "dependencies": {
-        "local-pkg": "latest",
-        "write-package": "latest",
+        "local-pkg": "^1.1.2",
+        "write-package": "^7.2.0",
       },
       "devDependencies": {
-        "@antfu/eslint-config": "latest",
-        "@tsuk1ko/postversion": "latest",
-        "eslint": "latest",
-        "eslint-config-prettier": "latest",
-        "jiti": "latest",
-        "prettier": "latest",
-        "typescript": "latest",
+        "@antfu/eslint-config": "^6.0.0",
+        "@tsuk1ko/postversion": "^1.0.2",
+        "eslint": "^9.37.0",
+        "eslint-config-prettier": "^10.1.8",
+        "jiti": "^2.6.1",
+        "prettier": "^3.6.2",
+        "typescript": "^5.9.3",
       },
       "peerDependencies": {
         "@antfu/eslint-config": ">=4",
