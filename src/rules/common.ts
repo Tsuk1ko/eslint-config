@@ -1,6 +1,7 @@
 import type { Rules } from '@antfu/eslint-config';
 
 export const commonRules: Rules = {
+  'antfu/consistent-chaining': 'off',
   'antfu/consistent-list-newline': 'off',
   'antfu/curly': 'off',
   'antfu/if-newline': 'off',
