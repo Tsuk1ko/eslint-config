@@ -1,7 +1,7 @@
 import antfu from '@antfu/eslint-config';
 import type { Rules } from '@antfu/eslint-config';
 import { isPackageExists } from 'local-pkg';
-import { commonRules, tsRules, vueRules } from './rules';
+import { commonRules, tsRules, vueRules } from './rules/index.js';
 
 type AntfuOptions = NonNullable<Parameters<typeof antfu>[0]>;
 

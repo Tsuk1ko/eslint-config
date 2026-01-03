@@ -1,3 +1,3 @@
-export * from './common';
-export * from './ts';
-export * from './vue';
+export * from './common.js';
+export * from './ts.js';
+export * from './vue.js';
