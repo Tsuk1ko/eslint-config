@@ -11,6 +11,7 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "prettier --write src/",
+    "preversion": "bun run lint && bun run build",
     "postversion": "tpv"
   },
   "bin": {
