@@ -34,7 +34,7 @@ export const commonRules: Rules = {
       ],
       ignoreCase: false,
       internalPattern: ['^@/.*', '^#.*'],
-      newlinesBetween: 'never',
+      newlinesBetween: 0,
     },
   ],
   'perfectionist/sort-named-imports': [
