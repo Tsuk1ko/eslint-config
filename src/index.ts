@@ -39,10 +39,10 @@ const mergeOptionsWithRules = <T extends { overrides?: Rules }>(
   return options;
 };
 
-const getMergedOptions = (target?: AntfuOptions) => {
+const getMergedOptions = (target?: AntfuOptions): AntfuOptions => {
   if (!target || Object.keys(target).length === 0) return defaultOptions;
 
-  const options = {
+  const options: AntfuOptions = {
     ...defaultOptions,
     ...target,
   };
@@ -61,8 +61,11 @@ const getMergedOptions = (target?: AntfuOptions) => {
 const config: typeof antfu = (options, ...userConfigs) =>
   antfu(
     getMergedOptions(options),
-    enablePrettier ? import('eslint-config-prettier').then(m => m.default) : {},
-    { rules: commonRules },
+    ...(enablePrettier ? [import('eslint-config-prettier').then(m => m.default)] : []),
+    {
+      name: 'kirin/common-rules',
+      rules: commonRules,
+    },
     ...userConfigs,
   );
 
