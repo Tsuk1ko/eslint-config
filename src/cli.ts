@@ -21,6 +21,14 @@ writeFileSync(
 );
 
 writeFileSync(
+  '.prettierignore',
+  `auto-imports.d.ts
+components.d.ts
+**/*.js
+`,
+);
+
+writeFileSync(
   'eslint.config.mjs',
   `import config from '@tsuk1ko/eslint-config';
 

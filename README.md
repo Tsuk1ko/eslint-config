@@ -18,7 +18,7 @@ npm i -D @tsuk1ko/eslint-config @antfu/eslint-config eslint eslint-config-pretti
 npx tec-init
 ```
 
-This will generate `eslint.config.mjs` and `.prettierrc.json` and **overwrite existing files**.
+This will do the things mentioned in the "**Manual configuration**" below and **overwrite existing files**.
 
 ### Manual configuration
 
@@ -44,6 +44,14 @@ Create `.prettierrc.json`:
 }
 ```
 
+Create `.prettierignore`:
+
+```
+auto-imports.d.ts
+components.d.ts
+**/*.js
+```
+
 Add npm scripts:
 
 ```json
@@ -54,6 +62,16 @@ Add npm scripts:
     "format": "prettier --write src/"
   }
 }
+```
+
+### Extends ignores
+
+```ts
+import config, { defaultIgnores } from './src';
+
+export default config(undefined, {
+  ignores: [...defaultIgnores, 'add your ignores'],
+});
 ```
 
 ### Custom

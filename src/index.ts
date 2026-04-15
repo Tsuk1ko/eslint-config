@@ -9,6 +9,8 @@ const enableVue = ['vue', 'nuxt', 'vitepress', '@slidev/cli'].some(pkg => isPack
 const enableTypescript = isPackageExists('typescript');
 const enablePrettier = isPackageExists('eslint-config-prettier');
 
+export const defaultIgnores = ['auto-imports.d.ts', 'components.d.ts', '.cursor/**/*', '**/*.js'];
+
 const defaultOptions = {
   vue: enableVue ? { overrides: vueRules } : undefined,
   typescript: enableTypescript ? { overrides: tsRules } : undefined,
@@ -17,7 +19,7 @@ const defaultOptions = {
   toml: false,
   markdown: false,
   pnpm: false,
-  ignores: ['**/*.js'],
+  ignores: defaultIgnores,
 } satisfies AntfuOptions;
 
 const mergeOptionsWithRules = <T extends { overrides?: Rules }>(
@@ -58,7 +60,7 @@ const getMergedOptions = (target?: AntfuOptions): AntfuOptions => {
   return options;
 };
 
-const config: typeof antfu = (options, ...userConfigs) =>
+export const config: typeof antfu = (options, ...userConfigs) =>
   antfu(
     getMergedOptions(options),
     ...(enablePrettier ? [import('eslint-config-prettier').then(m => m.default)] : []),
