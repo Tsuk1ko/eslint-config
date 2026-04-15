@@ -5,6 +5,7 @@
     "target": "ESNext",
     "module": "nodenext",
     "moduleDetection": "force",
+    "types": ["node"],
 
     // Bundler mode
     "moduleResolution": "nodenext",
@@ -23,6 +24,7 @@
     "noPropertyAccessFromIndexSignature": false,
 
     // Build
+    "rootDir": "./src",
     "outDir": "./dist",
     "declaration": true
   },
