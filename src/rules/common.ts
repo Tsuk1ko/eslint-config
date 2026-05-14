@@ -37,6 +37,7 @@ export const commonRules: Rules = {
         'unknown',
       ],
       ignoreCase: false,
+      internalPattern: ['^~.+', '^@/.+', '^#.+'],
       newlinesBetween: 'ignore',
       newlinesInside: 'ignore',
       partitionByNewLine: true,
