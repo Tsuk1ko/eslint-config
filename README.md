@@ -67,7 +67,7 @@ Add npm scripts:
 ### Extends ignores
 
 ```ts
-import config, { defaultIgnores } from './src';
+import config, { defaultIgnores } from '@tsuk1ko/eslint-config';
 
 export default config(undefined, {
   ignores: [...defaultIgnores, 'add your ignores'],
